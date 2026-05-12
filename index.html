@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Tiếng Anh 9 | Ôn Thi Vào 10</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         /* ================= THEME VARIABLES (ENGLISH ORANGE EDITION) ================= */
         :root {
@@ -17,6 +22,7 @@
             --text-light: #9a3412;
             --accent-english: #ea580c; 
             --border: #fed7aa;
+            --font-main: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
         }
 
         [data-theme="dark"] {
@@ -45,7 +51,7 @@
                               linear-gradient(90deg, var(--soft-orange) 1px, transparent 1px);
             background-size: 40px 40px;
             color: var(--text-dark);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: var(--font-main);
             line-height: 1.6;
         }
 
@@ -69,7 +75,6 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            font-family: 'Georgia', serif;
         }
 
         .logo-img {
@@ -100,7 +105,7 @@
             gap: 8px;
             text-decoration: none;
             font-size: 14px;
-            white-space: nowrap;
+            font-family: var(--font-main);
         }
 
         .theme-switch:hover {
@@ -110,13 +115,20 @@
 
         /* ================= HERO & SEARCH ================= */
         .hero { padding: 40px 5% 20px; text-align: center; }
-        .hero h1 { font-size: 2.8rem; color: var(--primary-orange); margin-bottom: 10px; font-family: 'Georgia', serif; }
+        .hero h1 { 
+            font-size: 2.8rem; 
+            color: var(--primary-orange); 
+            margin-bottom: 10px; 
+            font-weight: 800;
+            line-height: 1.2;
+        }
         
         .search-container { max-width: 600px; margin: 20px auto; }
         .search-box {
             width: 100%; padding: 15px 25px; border: 2px solid var(--border);
             border-radius: 12px; background: var(--card-bg); color: var(--text-dark); outline: none;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            font-family: var(--font-main);
         }
 
         /* ================= CARDS GRID ================= */
@@ -136,7 +148,7 @@
 
         .math-card::before {
             content: "A"; position: absolute; right: -5px; top: -15px; font-size: 5rem;
-            color: var(--soft-orange); opacity: 0.4; font-weight: bold; font-family: serif;
+            color: var(--soft-orange); opacity: 0.4; font-weight: 800;
         }
 
         .math-card:hover { 
